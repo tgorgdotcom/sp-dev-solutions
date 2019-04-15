@@ -130,13 +130,14 @@ export default class FilterPanel extends React.Component<IFilterPanelProps, IFil
                 {(this.state.selectedFilters.length > 0) ?
 
                     <div className={styles.searchWp__selectedFilters}>
+                        <i className='ms-Icon ms-Icon--ClearFilter'></i>&nbsp;
                         {renderSelectedFilters}
                     </div>
                     : null
                 }
                 <Panel
                         isOpen={this.state.showPanel}
-                        type={PanelType.medium}
+                        type={PanelType.smallFixedFar}
                         isLightDismiss={true}
                         onDismiss={this._onClosePanel}
                         headerText={strings.FilterPanelTitle}
